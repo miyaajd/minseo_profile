@@ -178,7 +178,7 @@ function Profile() {
           <span
             className="
             select-none whitespace-nowrap
-            px-4 text-4xl font-light
+            px-4 text-4xl font-extralight text-[#555]
           "
           >
             Open Link to CEO Journal
@@ -197,7 +197,7 @@ function Profile() {
             className="
             select-none whitespace-nowrap
             px-4 text-4xl
-            text-right font-light
+            text-right font-extralight text-[#555]
           "
           >
             A brand that creates artistic experiences <br /> through ( fragrance
@@ -265,7 +265,7 @@ function Profile() {
         </div>
       </div>
       {/* footer */}
-      <p className="pb-10 text-lg text-[#555] font-light">
+      <p className="py-10 text-lg text-[#555] font-light">
         Design & Development by Dongmi Jin | miyaajd@nowk.co.kr
       </p>
       {/* ---------------------------이력 토글 & 테이블--------------------------------------- */}
