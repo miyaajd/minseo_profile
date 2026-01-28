@@ -1,12 +1,12 @@
-import "./style/App.css";
+import Profile from "./pages/Profile"
+import "./style/App.css"
 
 function App() {
   return (
-    <>
-      <div>
-      </div>
-    </>
-  );
+    <div className="m-auto">
+      <Profile />
+    </div>
+  )
 }
 
-export default App;
+export default App

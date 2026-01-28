@@ -1,14 +1,18 @@
-* {
-  margin: 0;
-  padding: 0;
+@import "tailwindcss";
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+ font-family:"Pretendard Variable", "Pretendard", system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", sans-serif;
+  line-height: 1.4;
+  color: #111;
 }
 
 html, body, #root {
   height: 100%;
-}
-
-body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", sans-serif;
-  line-height: 1.4;
 }
