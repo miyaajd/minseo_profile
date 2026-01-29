@@ -1,22 +1,5 @@
 import { useState } from "react";
 
-// type 정의
-
-// type CareerItem = {
-//   periodStart: string;
-//   periodEnd: string; // "-" 가능
-//   company: string;
-//   position: string;
-//   role: string;
-// };
-
-// type CerItem = {
-//   date: string; // "2022.5" 같은 형태
-//   title: string;
-//   grade?: string; // 없으면 빈칸
-//   issuer: string;
-// };
-
 // 커리어데이터
 const careerData = [
   {
@@ -68,16 +51,16 @@ function Accordion({
   onClick,
   children,
 }: {
-  title: string;
+  title: React.ReactNode;
   open: boolean;
   onClick: () => void;
   children: React.ReactNode;
 }) {
   return (
-    <div className="border-b border-black/15 py-5">
+    <div className="border-b border-[#111]/15 py-5">
       <button
         onClick={onClick}
-        className="flex w-full items-center justify-between text-left text-xl font-normal cursor-pointer"
+        className="flex w-full items-center justify-between text-left text-xl font-normal cursor-pointer text-[#111]"
       >
         {title}
         <span className="text-xl">{open ? "− Close" : "+ Open"}</span>
@@ -88,32 +71,6 @@ function Accordion({
   );
 }
 
-// // 탭버튼 컴포넌트
-// function TabButton({
-//   active,
-//   children,
-//   onClick,
-// }: {
-//   active: boolean;
-//   children: React.ReactNode;
-//   onClick: () => void;
-// }) {
-//   return (
-//     <button
-//       type="button"
-//       onClick={onClick}
-//       className={[
-//         "rounded-full border px-4 py-2 text-sm transition cursor-pointer",
-//         active
-//           ? "border-black bg-black text-white"
-//           : "border-black/15 bg-white text-black hover:bg-black/5",
-//       ].join(" ")}
-//     >
-//       {children}
-//     </button>
-//   );
-// }
-
 // 메인---------------------------------------------------------------------------------------------------------
 
 function Profile() {
@@ -122,22 +79,29 @@ function Profile() {
 
   return (
     // 메인영역
-    <div className="mx-auto w-full max-w-400 px-5 sm:px-6 lg:px-8">
+    <div className="mx-auto w-full max-w-400 px-5 sm:px-6 lg:px-8 text-[#111] overflow-hidden">
       {/* 메인이미지 */}
-      <img className="m-auto" src="/images/nowl.png" alt="main" />
+      <img
+        className="m-auto w-full max-w-180 h-auto"
+        src="/images/nowl.png"
+        alt="main"
+      />
+
       {/* 메인인포 */}
-      <div className="info text-center flex justify-between items-end pb-6">
-        <div className="flex items-end gap-5">
-          <h1 className="text-5xl font-normal">Minseo Kwon</h1>
-          <span className="text-2xl">권민서</span>
+      <div className="info flex flex-col gap-6 text-center sm:flex-row sm:justify-between sm:items-end pb-6">
+        <div className="flex flex-col sm:flex-row sm:items-end gap-2 sm:gap-5">
+          <h1 className="text-3xl sm:text-5xl font-normal">Minseo Kwon</h1>
+          <span className="text-xl sm:text-2xl">권민서</span>
         </div>
-        <div className="flex flex-col gap-3">
-          <p className="text-2xl">+82 10 5214 7713</p>
-          <p className="text-2xl">kwon@nowk.co.kr</p>
+
+        <div className="flex flex-col gap-2 sm:gap-3">
+          <p className="text-xl sm:text-2xl">+82 10 5214 7713</p>
+          <p className="text-xl sm:text-2xl">kwon@nowk.co.kr</p>
         </div>
       </div>
+
       {/* nowk링크 */}
-      <div className="w-full pt-16 flex aline-center">
+      <div className="w-full pt-10 sm:pt-16 flex items-center">
         <i
           onClick={() =>
             window.open(
@@ -146,16 +110,17 @@ function Profile() {
               "noopener,noreferrer",
             )
           }
-          className="m-auto text-center text-4xl underline decoration-2 font-light cursor-pointer"
+          className="m-auto text-center text-2xl sm:text-4xl underline decoration-2 font-light cursor-pointer"
         >
           nowk.co.kr
         </i>
       </div>
+
       {/* ---------------------------- 이미지 섹션------------------------------------- */}
-      <section className="mx-auto max-w-400 py-16 under">
+      <section className="mx-auto max-w-400 py-10 sm:py-16 under">
         {/* 오른쪽 정렬 + hover 그룹 */}
         <div
-          className="ml-auto w-fit group flex items-end gap-4 cursor-pointer"
+          className="ml-auto w-full justify-end group flex flex-col-reverse sm:flex-row items-start sm:items-end gap-3 sm:gap-4 cursor-pointer"
           onClick={() =>
             window.open(
               "https://www.ceojhn.com/news/articleView.html?idxno=8677",
@@ -177,27 +142,35 @@ function Profile() {
           {/* 오른쪽에서 왼쪽으로 슬라이드되는 텍스트 */}
           <span
             className="
-            select-none whitespace-nowrap
-            px-4 text-4xl font-extralight text-[#555]
+            select-none
+            px-0 sm:px-4
+            text-xl sm:text-4xl
+            font-extralight text-[#555]
           "
           >
             Open Link to CEO Journal
           </span>
+
           {/* 이미지 */}
           <img
             src="/images/min.png"
             alt="newsimg"
-            className="block transition duration-300 group-hover:opacity-50"
+            className="block w-full sm:w-130 md:w-150 h-auto transition duration-300 group-hover:opacity-50"
           />
         </div>
+
         {/* 왼쪽정렬 */}
-        <div className="pt-16 max-w-full flex items-center gap-4 justify-between">
-          <img src="/images/min2.png" alt="img" className="w-[40%]" />
+        <div className="pt-10 sm:pt-16 max-w-full flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between">
+          <img src="/images/min2.png" alt="img" />
+
           <span
             className="
-            select-none whitespace-nowrap
-            px-4 text-4xl
-            text-right font-extralight text-[#555]
+            ml-auto
+            select-none
+            px-0 sm:px-4
+            text-xl sm:text-4xl
+            text-right
+            font-extralight text-[#555]
           "
           >
             A brand that creates artistic experiences <br /> through ( fragrance
@@ -205,11 +178,19 @@ function Profile() {
           </span>
         </div>
       </section>
+
       {/* ----------------------------아코디언섹션---------------------------------- */}
-      <section className="mx-auto max-w-400  py-16">
+      <section className="mx-auto max-w-400 py-10 sm:py-16">
         {/* 경력 및 활동 */}
         <Accordion
-          title="Experience & Activities | 경력 및 활동"
+          title={
+            <span>
+              <span className="block sm:inline">Experience & Activities</span>
+              <span className="block sm:inline sm:ml-2">
+                | 경력 및 활동
+              </span>
+            </span>
+          }
           open={open === "career"}
           onClick={() => setOpen(open === "career" ? null : "career")}
         >
@@ -218,17 +199,31 @@ function Profile() {
               key={i}
               className="grid grid-cols-1 gap-2 text-md sm:grid-cols-[160px_1fr_70px_160px] sm:items-center"
             >
-              <span className="text-black/60 text-left">{item.period}</span>
-              <span className="font-medium text-center">{item.company}</span>
-              <span className="text-center">{item.position}</span>
-              <span className="text-black/70 md:text-right">{item.role}</span>
+              <span className="text-[#111]/60 text-left">{item.period}</span>
+
+              <span className="font-medium text-left sm:text-center">
+                {item.company}
+              </span>
+
+              <span className="text-left sm:text-center">{item.position}</span>
+
+              <span className="text-[#111]/70 text-left sm:text-right">
+                {item.role}
+              </span>
             </div>
           ))}
         </Accordion>
 
         {/* 자격 및 교육사항 */}
         <Accordion
-          title="Certificates & Training | 자격 및 교육사항"
+          title={
+            <span>
+              <span className="block sm:inline">Certificates & Training</span>
+              <span className="block sm:inline sm:ml-2">
+                | 자격 및 교육사항
+              </span>
+            </span>
+          }
           open={open === "cert"}
           onClick={() => setOpen(open === "cert" ? null : "cert")}
         >
@@ -237,17 +232,25 @@ function Profile() {
               key={i}
               className="grid grid-cols-1 gap-2 text-md sm:grid-cols-[160px_1fr_70px_160px] sm:items-center"
             >
-              <span className="text-black/60">{item.date}</span>
-              <span className="font-medium text-center">{item.title}</span>
-              <span></span> {/*빈칸*/}
-              <span className="text-black/70 text-right">{item.issuer}</span>
+              <span className="text-[#111]/60 text-left">{item.date}</span>
+
+              <span className="font-medium text-left sm:text-center">
+                {item.title}
+              </span>
+
+              <span></span>
+
+              <span className="text-[#111]/70 text-left sm:text-right">
+                {item.issuer}
+              </span>
             </div>
           ))}
         </Accordion>
       </section>
+
       {/* 사이트 아이프레임 */}
       <div
-        className="flex justify-center py-16 cursor-pointer"
+        className="flex justify-center py-10 sm:py-16 cursor-pointer"
         onClick={() =>
           window.open(
             "https://www.nowk.co.kr/",
@@ -256,7 +259,7 @@ function Profile() {
           )
         }
       >
-        <div className="relative w-[70%] max-w-400 aspect-30/16 overflow-hidden">
+        <div className="relative w-full sm:w-[70%] max-w-400 aspect-30/16 overflow-hidden">
           <iframe
             src="https://www.nowk.co.kr/"
             className="absolute inset-0 h-full w-full border-0"
@@ -264,73 +267,11 @@ function Profile() {
           />
         </div>
       </div>
+
       {/* footer */}
-      <p className="py-10 text-lg text-[#555] font-light">
+      <p className="py-10 text-base sm:text-lg text-[#555] font-light">
         Design & Development by Dongmi Jin | miyaajd@nowk.co.kr
       </p>
-      {/* ---------------------------이력 토글 & 테이블--------------------------------------- */}
-      {/* <section className="mx-auto max-w-[1200px] px-6 py-16"> */}
-      {/* ===== 탭 영역 ===== */}
-      {/* <div className="flex gap-2 mb-8">
-          <TabButton active={tab === "career"} onClick={() => setTab("career")}>
-            경력 및 활동
-          </TabButton>
-
-          <TabButton active={tab === "cert"} onClick={() => setTab("cert")}>
-            자격 및 교육사항
-          </TabButton>
-        </div> */}
-
-      {/* ===== 경력 테이블 ===== */}
-      {/* {tab === "career" && (
-          <table className="w-full border text-sm">
-            <thead className="bg-black/5">
-              <tr>
-                <th className="p-3">근무기간</th>
-                <th className="p-3">근무처</th>
-                <th className="p-3">직위</th>
-                <th className="p-3">담당 직무</th>
-              </tr>
-            </thead>
-            <tbody>
-              {careerData.map((item, i) => (
-                <tr key={i} className="border-t">
-                  <td className="p-3">
-                    {item.periodStart} ~ {item.periodEnd}
-                  </td>
-                  <td className="p-3">{item.company}</td>
-                  <td className="p-3">{item.position}</td>
-                  <td className="p-3">{item.role}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        )} */}
-
-      {/* ===== 자격/교육 테이블 ===== */}
-      {/* {tab === "cert" && (
-          <table className="w-full border text-sm">
-            <thead className="bg-black/5">
-              <tr>
-                <th className="p-3">취득일자</th>
-                <th className="p-3">자격 및 교육명</th>
-                <th className="p-3">등급</th>
-                <th className="p-3">발급기관</th>
-              </tr>
-            </thead>
-            <tbody>
-              {certData.map((item, i) => (
-                <tr key={i} className="border-t">
-                  <td className="p-3">{item.date}</td>
-                  <td className="p-3">{item.title}</td>
-                  <td className="p-3">{item.grade ?? "-"}</td>
-                  <td className="p-3">{item.issuer}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        )} */}
-      {/* </section> */}
     </div>
   );
 }
