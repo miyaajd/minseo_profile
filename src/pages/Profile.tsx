@@ -6,22 +6,19 @@ const careerData = [
     period: "2022.10 ~ 2024.9",
     company: "(주)토브지엠피",
     position: "운영실장",
-    role: "운영 총괄",
   },
   {
     period: "2022.10 ~ 2024.9",
     company: "한국미용아카데미",
     position: "교육실장",
-    role: "교육 총괄",
   },
   {
     period: "2023.6 ~ 2025.3",
     company: "한국미용학회",
     position: "간사",
-    role: "편집간사",
   },
-  { period: "2025.3 ~ -", company: "베스페르", position: "대표", role: "대표" },
-  { period: "2026.1 ~ -", company: "nowk", position: "대표", role: "대표" },
+  { period: "2025.3 ~ -", company: "베스페르", position: "대표",},
+  { period: "2026.1 ~ -", company: "nowk", position: "대표",},
 ];
 
 // 자격데이터
@@ -197,7 +194,7 @@ function Profile() {
           {careerData.map((item, i) => (
             <div
               key={i}
-              className="grid grid-cols-1 gap-2 text-md sm:grid-cols-[160px_1fr_70px_160px] sm:items-center"
+              className="grid grid-cols-1 gap-2 text-md sm:grid-cols-[160px_1fr_230px] sm:items-center"
             >
               <span className="text-[#111]/60 text-left">{item.period}</span>
 
@@ -205,11 +202,8 @@ function Profile() {
                 {item.company}
               </span>
 
-              <span className="text-left sm:text-center">{item.position}</span>
+              <span className="text-left sm:text-right">{item.position}</span>
 
-              <span className="text-[#111]/70 text-left sm:text-right">
-                {item.role}
-              </span>
             </div>
           ))}
         </Accordion>
@@ -230,16 +224,13 @@ function Profile() {
           {certData.map((item, i) => (
             <div
               key={i}
-              className="grid grid-cols-1 gap-2 text-md sm:grid-cols-[160px_1fr_70px_160px] sm:items-center"
+              className="grid grid-cols-1 gap-2 text-md sm:grid-cols-[160px_1fr_230px] sm:items-center"
             >
               <span className="text-[#111]/60 text-left">{item.date}</span>
 
               <span className="font-medium text-left sm:text-center">
                 {item.title}
               </span>
-
-              <span></span>
-
               <span className="text-[#111]/70 text-left sm:text-right">
                 {item.issuer}
               </span>
