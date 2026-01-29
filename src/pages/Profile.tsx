@@ -87,18 +87,18 @@ function Profile() {
       {/* 메인인포 */}
       <div className="info flex flex-col gap-6 text-center sm:flex-row sm:justify-between sm:items-end pb-6">
         <div className="flex flex-col sm:flex-row sm:items-end gap-2 sm:gap-5">
-          <h1 className="text-3xl sm:text-5xl font-normal">Minseo Kwon</h1>
-          <span className="text-xl sm:text-2xl">권민서</span>
+          <h1 className="text-xl sm:text-5xl font-normal">Minseo Kwon</h1>
+          <span className="text-lg sm:text-2xl">권민서</span>
         </div>
 
-        <div className="flex flex-col gap-2 sm:gap-3">
-          <p className="text-xl sm:text-2xl">+82 10 5214 7713</p>
-          <p className="text-xl sm:text-2xl">kwon@nowk.co.kr</p>
+        <div className="flex flex-col gap-1 sm:gap-3">
+          <p className="text-lg sm:text-2xl">+82 10 5214 7713</p>
+          <p className="text-lg sm:text-2xl">kwon@nowk.co.kr</p>
         </div>
       </div>
 
       {/* nowk링크 */}
-      <div className="w-full pt-10 sm:pt-16 flex items-center">
+      <div className="w-full pt-6 sm:pt-16 flex items-center">
         <i
           onClick={() =>
             window.open(
@@ -107,7 +107,7 @@ function Profile() {
               "noopener,noreferrer",
             )
           }
-          className="m-auto text-center text-2xl sm:text-4xl underline decoration-2 font-light cursor-pointer"
+          className="m-auto text-center text-xl sm:text-4xl underline decoration-2 font-light cursor-pointer"
         >
           nowk.co.kr
         </i>
@@ -260,7 +260,7 @@ function Profile() {
       </div>
 
       {/* footer */}
-      <p className="py-10 text-base sm:text-lg text-[#555] font-light">
+      <p className="py-10 text-[12px] sm:text-lg text-[#555] font-light">
         Design & Development by Dongmi Jin | miyaajd@nowk.co.kr
       </p>
     </div>
