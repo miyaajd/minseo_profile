@@ -165,7 +165,7 @@ function Profile() {
             ml-auto
             select-none
             px-0 sm:px-4
-            text-xl sm:text-4xl
+            text-lg sm:text-4xl
             text-right
             font-extralight text-[#555]
           "
@@ -202,7 +202,7 @@ function Profile() {
                 {item.company}
               </span>
 
-              <span className="text-left sm:text-right">{item.position}</span>
+              <span className="text-[#111]/70 text-left sm:text-right">{item.position}</span>
 
             </div>
           ))}
