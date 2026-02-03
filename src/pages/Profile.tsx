@@ -152,7 +152,7 @@ function Profile() {
           <img
             src="/images/min.png"
             alt="newsimg"
-            className="block w-full sm:w-130 md:w-150 h-auto transition duration-300 group-hover:opacity-50"
+            className="block w-full sm:w-130 md:w-150 h-auto transition duration-300 group-hover:opacity-50 hover:scale-105"
           />
         </div>
 
