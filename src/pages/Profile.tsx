@@ -250,7 +250,7 @@ function Profile() {
           )
         }
       >
-        <div className="relative w-full sm:w-[70%] max-w-400 aspect-30/16 overflow-hidden">
+        <div className="relative w-full sm:w-[70%] max-w-400 aspect-9/16 sm:aspect-30/16 overflow-hidden">
           <iframe
             src="https://www.nowk.co.kr/"
             className="absolute inset-0 h-full w-full border-0"
