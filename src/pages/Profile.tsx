@@ -56,7 +56,7 @@ const certData = [
   { date: "2022.10", title: "조향사 1급", issuer: "한국자격검정평가진흥원" },
   {
     date: "2023.01",
-    title: "TM ACADEMY 기초 메이크업 과정 수료",
+    title: "ITM ACADEMY 기초 메이크업 과정 수료",
     issuer: "프랑스 파리 itm 아카데미",
   },
   {
@@ -126,8 +126,8 @@ function Profile() {
           <span className="text-lg sm:text-2xl">권민서</span>
         </div>
 
-        <div className="flex flex-col gap-1 sm:gap-3">
-          <p className="text-lg sm:text-2xl">+82 10 5214 7713</p>
+        <div className="flex flex-col gap-1 sm:gap-3 sm:items-end">
+          <p className="text-lg sm:text-2xl">Contact — 070 7602 7713</p>
           <p className="text-lg sm:text-2xl">kwon@nowk.co.kr</p>
         </div>
       </div>
