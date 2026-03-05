@@ -107,7 +107,7 @@ function Accordion({
 
 function Profile() {
   // 현재 선택된 탭 상태
-  const [open, setOpen] = useState<string | null>("career");
+  const [open, setOpen] = useState<string | null>(null);
 
   return (
     // 메인영역
