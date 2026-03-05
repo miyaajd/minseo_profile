@@ -13,9 +13,29 @@ const careerData = [
     position: "교육실장",
   },
   {
+    period: "2023.05",
+    company: "건강보험심사평가원",
+    position: "조향, 화장품 강의",
+  },
+  {
     period: "2023.6 ~ 2025.3",
     company: "한국미용학회",
     position: "간사",
+  },
+  {
+    period: "2023.12",
+    company: "삼척시 도시재생플랫폼",
+    position: "기초화장품 강의",
+  },
+  {
+    period: "2024.10",
+    company: "부산보건대학교",
+    position: "맞춤형화장품조제관리사 초청특강",
+  },
+  {
+    period: "2024.11",
+    company: "부산보건대학교",
+    position: "화장품 브랜드매니지먼트 초청특강",
   },
   { period: "2025.3 ~ -", company: "베스페르", position: "대표",},
   { period: "2026.1 ~ -", company: "nowk", position: "대표",},
@@ -38,6 +58,21 @@ const certData = [
     date: "2023.01",
     title: "TM ACADEMY 기초 메이크업 과정 수료",
     issuer: "프랑스 파리 itm 아카데미",
+  },
+  {
+    date: "2023.02",
+    title: "동아대학교 현대미술학과 학사",
+    issuer: "동아대학교",
+  },
+  {
+    date: "2024.12",
+    title: "한국미용학회 최우수논문상",
+    issuer: "한국미용학회",
+  },
+  {
+    date: "2026.02",
+    title: "건국대학교 산업대학원 향장학과 화장품산업 및 브랜드매니지먼트 전공 석사",
+    issuer: "건국대학교",
   },
 ];
 
