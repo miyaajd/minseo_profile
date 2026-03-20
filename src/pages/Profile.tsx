@@ -37,8 +37,8 @@ const careerData = [
     company: "부산보건대학교",
     position: "화장품 브랜드매니지먼트 초청특강",
   },
-  { period: "2025.3 ~ -", company: "베스페르", position: "대표",},
-  { period: "2026.1 ~ -", company: "nowk", position: "대표",},
+  { period: "2025.3 ~ -", company: "베스페르", position: "대표" },
+  { period: "2026.1 ~ -", company: "nowk", position: "대표" },
 ];
 
 // 자격데이터
@@ -71,7 +71,8 @@ const certData = [
   },
   {
     date: "2026.02",
-    title: "건국대학교 산업대학원 향장학과 화장품산업 및 브랜드매니지먼트 전공 석사",
+    title:
+      "건국대학교 산업대학원 향장학과 화장품산업 및 브랜드매니지먼트 전공 석사",
     issuer: "건국대학교",
   },
 ];
@@ -115,7 +116,7 @@ function Profile() {
       {/* 메인이미지 */}
       <img
         className="m-auto w-full max-w-180 h-auto"
-        src="/images/nowl.png"
+        src="https://raw.githubusercontent.com/miyaajd/minseo_profile/main/public/images/nowk-card.png"
         alt="main"
       />
 
@@ -185,7 +186,7 @@ function Profile() {
 
           {/* 이미지 */}
           <img
-            src="/images/min.png"
+            src="https://raw.githubusercontent.com/miyaajd/minseo_profile/main/public/images/min.png"
             alt="newsimg"
             className="block w-full sm:w-130 md:w-150 h-auto transition duration-300 group-hover:opacity-50 hover:scale-105"
           />
@@ -193,7 +194,10 @@ function Profile() {
 
         {/* 왼쪽정렬 */}
         <div className="pt-10 sm:pt-16 max-w-full flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between">
-          <img src="/images/min2.png" alt="img" />
+          <img
+            src="https://raw.githubusercontent.com/miyaajd/minseo_profile/main/public/images/min2.png"
+            alt="img"
+          />
 
           <span
             className="
@@ -218,9 +222,7 @@ function Profile() {
           title={
             <span>
               <span className="block sm:inline">Experience & Activities</span>
-              <span className="block sm:inline sm:ml-2">
-                | 경력 및 활동
-              </span>
+              <span className="block sm:inline sm:ml-2">| 경력 및 활동</span>
             </span>
           }
           open={open === "career"}
@@ -237,8 +239,9 @@ function Profile() {
                 {item.company}
               </span>
 
-              <span className="text-[#111]/70 text-left sm:text-right">{item.position}</span>
-
+              <span className="text-[#111]/70 text-left sm:text-right">
+                {item.position}
+              </span>
             </div>
           ))}
         </Accordion>
