@@ -129,7 +129,12 @@ function Profile() {
 
         <div className="flex flex-col gap-1 sm:gap-3 sm:items-end">
           <p className="text-lg sm:text-2xl">Contact — 070 7602 7713</p>
-          <p className="text-lg sm:text-2xl">kwon@nowk.co.kr</p>
+          <a
+            href="mailto:kwon@nowk.co.kr"
+            className="text-lg sm:text-2xl hover:underline"
+          >
+            kwon@nowk.co.kr
+          </a>
         </div>
       </div>
 
@@ -235,11 +240,11 @@ function Profile() {
             >
               <span className="text-[#111]/60 text-left">{item.period}</span>
 
-              <span className="font-medium text-left sm:text-center">
+              <span className="font-semibold text-left sm:text-center">
                 {item.company}
               </span>
 
-              <span className="text-[#111]/70 text-left sm:text-right">
+              <span className="text-[#111]/60 font-semibold text-left sm:text-right">
                 {item.position}
               </span>
             </div>
@@ -266,10 +271,10 @@ function Profile() {
             >
               <span className="text-[#111]/60 text-left">{item.date}</span>
 
-              <span className="font-medium text-left sm:text-center">
+              <span className="font-semibold text-left sm:text-center">
                 {item.title}
               </span>
-              <span className="text-[#111]/70 text-left sm:text-right">
+              <span className="text-[#111]/60 font-semibold text-left sm:text-right">
                 {item.issuer}
               </span>
             </div>
