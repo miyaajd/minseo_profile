@@ -240,11 +240,11 @@ function Profile() {
             >
               <span className="text-[#111]/60 text-left">{item.period}</span>
 
-              <span className="font-semibold text-left sm:text-center">
+              <span className="font-semibold text-right sm:text-center">
                 {item.company}
               </span>
 
-              <span className="text-[#111]/50 font-semibold text-left sm:text-right">
+              <span className="text-[#111]/40 font-semibold text-right sm:text-right">
                 {item.position}
               </span>
             </div>
@@ -271,10 +271,10 @@ function Profile() {
             >
               <span className="text-[#111]/40 text-left">{item.date}</span>
 
-              <span className="font-semibold text-left sm:text-center">
+              <span className="font-semibold text-right sm:text-center">
                 {item.title}
               </span>
-              <span className="text-[#111]/40 font-semibold text-left sm:text-right">
+              <span className="text-[#111]/40 font-semibold text-right sm:text-right">
                 {item.issuer}
               </span>
             </div>
