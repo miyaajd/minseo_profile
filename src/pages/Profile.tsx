@@ -244,7 +244,7 @@ function Profile() {
                 {item.company}
               </span>
 
-              <span className="text-[#111]/60 font-semibold text-left sm:text-right">
+              <span className="text-[#111]/50 font-semibold text-left sm:text-right">
                 {item.position}
               </span>
             </div>
@@ -274,7 +274,7 @@ function Profile() {
               <span className="font-semibold text-left sm:text-center">
                 {item.title}
               </span>
-              <span className="text-[#111]/60 font-semibold text-left sm:text-right">
+              <span className="text-[#111]/50 font-semibold text-left sm:text-right">
                 {item.issuer}
               </span>
             </div>
