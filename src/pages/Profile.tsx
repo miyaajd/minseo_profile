@@ -182,7 +182,7 @@ function Profile() {
             className="
             select-none
             px-0 sm:px-4
-            text-xl sm:text-4xl
+            text-md sm:text-3xl
             font-extralight text-[#555]
           "
           >
@@ -198,7 +198,7 @@ function Profile() {
         </div>
 
         {/* 왼쪽정렬 */}
-        <div className="pt-10 sm:pt-16 max-w-full flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between">
+        <div className="pt-6 sm:pt-16 max-w-full flex flex-col sm:flex-row items-start sm:items-center gap-3 justify-between">
           <img
             src="https://raw.githubusercontent.com/miyaajd/minseo_profile/main/public/images/min2.png"
             alt="img"
@@ -209,7 +209,7 @@ function Profile() {
             ml-auto
             select-none
             px-0 sm:px-4
-            text-lg sm:text-4xl
+            text-md sm:text-3xl
             text-right
             font-extralight text-[#555]
           "
@@ -221,7 +221,7 @@ function Profile() {
       </section>
 
       {/* ----------------------------아코디언섹션---------------------------------- */}
-      <section className="mx-auto max-w-400 py-10 sm:py-16">
+      <section className="mx-auto max-w-400 pb-10 sm:py-16">
         {/* 경력 및 활동 */}
         <Accordion
           title={
@@ -282,9 +282,9 @@ function Profile() {
         </Accordion>
       </section>
 
-      {/* 사이트 아이프레임 */}
+      {/* 사이트 아이프레임 ---------------------------------------------------------------------------------------------*/}
       <div
-        className="flex justify-center py-10 sm:py-16 cursor-pointer"
+        className="flex justify-center pb-10 sm:py-16 cursor-pointer"
         onClick={() =>
           window.open(
             "https://www.nowk.co.kr/",
@@ -302,8 +302,8 @@ function Profile() {
         </div>
       </div>
 
-      {/* footer */}
-      <p className="py-10 text-[12px] sm:text-lg text-[#555] font-light">
+      {/* footer--------------------------------------------------------------------------------------------- */}
+      <p className="pb-10 text-[12px] sm:text-lg text-[#555] font-light">
         Design & Development by Dongmi Jin | miyaajd@nowk.co.kr
       </p>
     </div>
