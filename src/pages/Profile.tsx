@@ -269,12 +269,12 @@ function Profile() {
               key={i}
               className="grid grid-cols-1 gap-2 text-md sm:grid-cols-[160px_1fr_230px] sm:items-center"
             >
-              <span className="text-[#111]/60 text-left">{item.date}</span>
+              <span className="text-[#111]/40 text-left">{item.date}</span>
 
               <span className="font-semibold text-left sm:text-center">
                 {item.title}
               </span>
-              <span className="text-[#111]/50 font-semibold text-left sm:text-right">
+              <span className="text-[#111]/40 font-semibold text-left sm:text-right">
                 {item.issuer}
               </span>
             </div>
